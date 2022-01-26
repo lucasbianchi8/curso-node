@@ -1,16 +1,16 @@
-
-const table = require('./create-table');
 const argv = require('yargs')
     .option('b', {
         alias: 'base',
         type: 'number',
-        demandOption: true
+        demandOption: true,
+        describe: 'Es la base de la tabla de multiplicar',
     })
     .option('l', {
         alias: 'listar',
         type: 'boolean',
         demandOption: true,
-        default: false
+        default: false,
+        describe: 'Muestra la tabla en consola',
     })
     .check((argv) => {
         try {
@@ -30,8 +30,4 @@ const argv = require('yargs')
     })
     .argv;
 
-if (argv.l) {
-    table.createTable(Number(argv.b))
-	.then(resp => console.log(resp))
-	.catch(error => console.error(error));
-}
+module.exports = { argv };

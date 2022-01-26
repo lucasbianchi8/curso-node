@@ -1,0 +1,15 @@
+{
+  "name": "tarea-5",
+  "version": "1.0.0",
+  "description": "Aplicacion Tarea 5",
+  "main": "app.js",
+  "scripts": {
+    "test": "node app"
+  },
+  "author": "Bianchi, Lucas",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "yargs": "^17.3.1"
+  }
+}
